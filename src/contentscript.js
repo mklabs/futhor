@@ -1,16 +1,12 @@
-
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
 import { Store } from 'react-chrome-redux';
+import { wrapStore } from 'react-contentscript-redux';
 
-import App from './components/App';
+var script = document.createElement('script');
+script.src = chrome.extension.getURL('script.js');
+script.onload = function() {
+  const proxyStore = new Store({ portName: 'futbudd' });
+  wrapStore(proxyStore);
+  this.remove();
+};
 
-const proxyStore = new Store({ portName: 'futbudd' });
-
-const anchor = document.createElement('div');
-anchor.id = 'futbudd-anchor';
-
-document.body.insertBefore(anchor, document.body.childNodes[0]);
-
-render(<Provider store={proxyStore}><App/></Provider>, document.getElementById('futbudd-anchor'));
+(document.head || document.documentElement).appendChild(script);

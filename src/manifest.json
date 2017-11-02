@@ -25,5 +25,7 @@
   "permissions": [
     "activeTab",
     "storage"
-  ]
+  ],
+
+  "web_accessible_resources": ["script.js"]
 }
