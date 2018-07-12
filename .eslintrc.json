@@ -3,10 +3,19 @@
       "browser": true,
       "commonjs": true,
       "es6": true,
-      "node": true
+      "node": true,
+      "jquery": true
     },
     "globals": {
-      "chrome": true
+      "chrome": true,
+      "gAuthenticationModel": true,
+      "gNavManager": true,
+      "models": true,
+      "services": true,
+      "repositories": true,
+      "enums": true,
+      "fut_guid": true,
+      "gUserModel": true
     },
     "extends": [ "eslint:recommended", "plugin:react/recommended" ],
     "parserOptions": {
@@ -27,7 +36,7 @@
         "indent": [
             "error",
             2,
-            { "flatTernaryExpressions": true }
+            { "flatTernaryExpressions": true, "SwitchCase": 1 }
         ],
         "quotes": [
             "error",

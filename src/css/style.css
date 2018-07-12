@@ -1,0 +1,90 @@
+@media (max-width: 1130px) {
+  body .listFUTItem .auction {
+    padding-left: 7rem;
+  }
+}
+
+body .listFUTItem .auction .auctionValue {
+  width: 24%;
+}
+
+body .listFUTItem .auction .auction-state {
+  width: 12%;
+  float: left;
+}
+
+body .tile-count {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px -10px;
+  border-style: solid;
+  border-color: #bcbaca;
+  border-width: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.tile-stats-count {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.tile-count .tile-stats-count {
+  border-bottom: 1px solid #D9DEE4;
+  padding: 0 10px 0 20px;
+  position: relative
+}
+
+.tile-count .tile-stats-count:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 65px;
+  border-left: 2px solid #ADB2B5;
+  margin-top: 10px
+}
+
+@media (min-width: 992px) {
+  footer {
+    margin-left: 230px
+  }
+
+  .tile-count .tile-stats-count {
+    margin-bottom: 10px;
+    border-bottom: 0;
+    padding-bottom: 10px
+  }
+
+  .tile-count .tile-stats-count:first-child:before {
+    border-left: 0
+  }
+}
+
+.tile-count .tile-stats-count .count {
+  font-size: 30px;
+  line-height: 47px;
+  font-weight: 600
+}
+
+@media (min-width: 992px) and (max-width:1100px) {
+  .tile-count .tile-stats-count .count {
+    font-size: 30px
+  }
+}
+
+.tile-count .tile-stats-count span {
+  font-size: 12px
+}
+
+@media (min-width: 768px) {
+  .tile-count .tile-stats-count span {
+    font-size: 13px
+  }
+}
+
+.tile-count .tile-stats-count .count_bottom i {
+  width: 12px
+}
+
+body .list-view-header .btn {
+  margin: 0 8px;
+}

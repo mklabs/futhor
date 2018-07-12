@@ -22,29 +22,34 @@ gulp.task('webpack', ['clean'], (cb) => {
 
 gulp.task('popup-html', ['clean'], () => {
   return gulp.src('src/popup.html')
-    .pipe(gulp.dest(DEST))
+    .pipe(gulp.dest(DEST));
 });
 
 gulp.task('copy-manifest', ['clean'], () => {
   return gulp.src('src/manifest.json')
-    .pipe(gulp.dest(DEST))
+    .pipe(gulp.dest(DEST));
 });
 
 gulp.task('copy-image', ['clean'], () => {
   return gulp.src('src/icon.png')
-    .pipe(gulp.dest(DEST))
+    .pipe(gulp.dest(DEST));
 });
 
 gulp.task('copy-style', ['clean'], () => {
-  return gulp.src('src/style.css')
-    .pipe(gulp.dest(DEST))
+  return gulp.src('src/css/**/*')
+    .pipe(gulp.dest(path.join(DEST, 'css')));
+});
+
+gulp.task('copy-fonts', ['clean'], () => {
+  return gulp.src('src/fonts/**/*')
+    .pipe(gulp.dest(path.join(DEST, 'fonts')));
 });
 
 gulp.task('clean', (cb) => {
   rimraf(DEST, cb);
 });
 
-gulp.task('copy', ['copy-manifest', 'copy-style', 'copy-image']);
+gulp.task('copy', ['copy-manifest', 'copy-style', 'copy-fonts', 'copy-image']);
 gulp.task('build', ['copy', 'popup-html', 'webpack']);
 
 gulp.task('watch', ['default'], () => {

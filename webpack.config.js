@@ -5,7 +5,7 @@ export default {
     background: './src/background.js',
     contentscript: './src/contentscript.js',
     popup: './src/popup.js',
-    script: './src/script.js'
+    script: ['babel-polyfill', './src/script.js']
   },
 
   output: {
