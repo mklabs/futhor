@@ -4,7 +4,7 @@ import { wrapStore } from 'react-contentscript-redux';
 var script = document.createElement('script');
 script.src = chrome.extension.getURL('script.js');
 script.onload = function() {
-  const proxyStore = new Store({ portName: 'futbudd' });
+  const proxyStore = new Store({ portName: 'futhor' });
   wrapStore(proxyStore);
   this.remove();
 };

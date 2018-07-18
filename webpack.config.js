@@ -10,7 +10,7 @@ export default {
 
   output: {
     filename: '[name].js',
-    path: path.join(__dirname, '../futbudd-build')
+    path: path.join(__dirname, '../futhor-build')
   },
 
   resolve: {

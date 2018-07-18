@@ -6,7 +6,7 @@ import reducer, { initialState } from './reducers';
 const storedState = localStorage.getItem('state');
 const store = createStore(reducer, storedState ? JSON.parse(storedState) : initialState, applyMiddleware(logger));
 
-wrapStore(store, { portName: 'futbudd' });
+wrapStore(store, { portName: 'futhor' });
 
 store.subscribe(() => {
   const state = JSON.stringify(store.getState());

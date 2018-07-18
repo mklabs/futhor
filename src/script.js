@@ -7,7 +7,7 @@ import App from './components/App';
 const store = new Store();
 
 const app = $('<div id="app"/>');
-const button = $('<button />').addClass('btnFooter btnTransfers js-futbudd-open').text('Futbudd');
+const button = $('<button />').addClass('btnFooter btnTransfers js-futhor-open').text('futhor');
 let lastViewName = '';
 let lastView;
 
@@ -23,14 +23,14 @@ gAuthenticationModel.addListener(models.AuthenticationModel.EVENT_AUTHENTICATION
   button.on('mouseover', () => button.addClass('hover'));
   button.on('mouseout', () => button.removeClass('hover'));
 
-  footer.on('click', '.js-futbudd-open', () => {
+  footer.on('click', '.js-futhor-open', () => {
     lastView = content.find('> :first-child').hide();
     footer.find('.selected').removeClass('selected');
     button.addClass('selected');
     app.appendTo(content);
 
     $('.headerButton').addClass('invisible');
-    $('#futHeaderTitle').text('Futbudd');
+    $('#futHeaderTitle').text('Futhor');
     render(<Provider store={store}><App/></Provider>, app.get(0));
   });
 });

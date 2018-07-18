@@ -6,7 +6,7 @@ import path from 'path';
 
 const plugins = loadPlugins();
 
-const DEST = path.join(__dirname, '../futbudd-build');
+const DEST = path.join(__dirname, '../futhor-build');
 
 import webpackConfig from './webpack.config';
 

@@ -1,4 +1,4 @@
-#futbudd-anchor {
+#futhor-anchor {
   position: absolute;
   z-index: 10;
   bottom: 0;
@@ -9,7 +9,7 @@
   transition: height 0.3s;
 }
 
-#futbudd-anchor.active {
+#futhor-anchor.active {
   height: 90%;
 }
 

@@ -1,13 +1,14 @@
 {
-  "name": "futbudd",
+  "name": "futhor",
   "version": "1.0.0",
   "description": "Chrome extension that enhances the fut web app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Mickael Daniel <mklabs>",
+  "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "react": "^16.0.0",
