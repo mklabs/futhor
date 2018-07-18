@@ -41,6 +41,7 @@ Thanks to
 - Font-awesome
 - Bootstrap
 - The fut webapp
-- react-contentscript-redux
+- [react-chrome-redux](https://github.com/tshaddix/react-chrome-redux)
+- react-contentscript-redux, tho I'm not sure I need this anymore
 
 **WIP**
